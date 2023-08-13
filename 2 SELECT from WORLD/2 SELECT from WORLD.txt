@@ -36,4 +36,11 @@ For South America show population in millions and GDP in billions both to 2 deci
 Show per-capita GDP for the trillion dollar countries to the nearest $1000.
 * SELECT name, ROUND(gdp/population,-3) AS gdp FROM world WHERE gdp >= 1000000000000 
 
-11.
+11. Greece has capital Athens.
+Each of the strings 'Greece', and 'Athens' has 6 characters.
+Show the name and capital where the name and the capital have the same number of characters.
+You can use the LENGTH function to find the number of characters in a string
+For Microsoft SQL Server the function LENGTH is LEN
+* SELECT name, LEN(name) AS nameLen, capital, LEN(capital) AS capitalLen FROM world WHERE LEN(name) = LEN(capital)
+
+12.
