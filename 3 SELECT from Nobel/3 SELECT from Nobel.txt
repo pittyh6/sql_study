@@ -3,3 +3,6 @@
 
 2. Show who won the 1962 prize for literature.
 * SELECT winner FROM nobel WHERE yr = 1962 AND subject LIKE 'literature'
+
+3. Show the year and subject that won 'Albert Einstein' his prize.
+* SELECT yr, subject FROM nobel WHERE winner LIKE 'Albert Einstein'
