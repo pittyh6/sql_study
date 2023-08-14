@@ -27,4 +27,5 @@ Barack Obama
 * SELECT yr, subject, winner FROM nobel WHERE subject LIKE 'physics' AND yr = 1980 
       UNION SELECT yr, subject, winner FROM nobel WHERE subject LIKE 'chemistry' AND yr = 1984
 
-9. 
+9. Show the year, subject, and name of winners for 1980 excluding chemistry and medicine
+* SELECT yr, subject, winner FROM nobel WHERE yr = 1980 AND NOT subject IN ('chemistry','medicine')
