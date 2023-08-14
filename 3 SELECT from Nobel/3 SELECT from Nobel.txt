@@ -36,3 +36,6 @@ Barack Obama
 
 11. Find all details of the prize won by PETER GRÜNBERG
 * SELECT * FROM nobel WHERE winner LIKE 'PETER GRÜNBERG'
+
+12. Find all details of the prize won by EUGENE O'NEILL
+* SELECT * FROM nobel WHERE winner LIKE 'Eugene O''Neill'
