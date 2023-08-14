@@ -5,3 +5,7 @@
 2. Show the countries in Europe with a per capita GDP greater than 'United Kingdom'.
 * SELECT name FROM world WHERE continent LIKE 'Europe' AND gdp/population > 
 	(SELECT gdp/population from world where name LIKE 'United Kingdom')
+
+3. List the name and continent of countries in the continents containing either Argentina or Australia. Order by name of the country.
+* SELECT name, continent from world WHERE continent IN 
+	(SELECT continent from world where name IN ('Argentina','Australia'))
