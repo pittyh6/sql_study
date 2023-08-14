@@ -9,3 +9,11 @@
 3. List the name and continent of countries in the continents containing either Argentina or Australia. Order by name of the country.
 * SELECT name, continent from world WHERE continent IN 
 	(SELECT continent from world where name IN ('Argentina','Australia'))
+
+4. Which country has a population that is more than United Kingdom but less than Germany? Show the name and the population.
+* SELECT name, population FROM world WHERE population > 
+	(SELECT population FROM world WHERE name LIKE 'United Kingdom') 
+		AND population < 
+			(SELECT population FROM world WHERE name LIKE 'Germany')
+
+5. 
