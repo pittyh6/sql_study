@@ -30,3 +30,7 @@ WHERE continent = 'Europe'
 * SELECT continent, name, area FROM world c1
 	WHERE area = (SELECT MAX(area) FROM world c2 WHERE c2.continent = c1.continent)
 
+8. List each continent and the name of the country that comes first alphabetically.
+* SELECT continent, MIN(name) FROM world GROUP BY continent
+
+9.
