@@ -32,3 +32,6 @@ List the dates of the matches and the name of the team in which 'Fernando Santos
 
 7. List the player for every goal scored in a game where the stadium was 'National Stadium, Warsaw'
 * SELECT goal.player FROM goal JOIN game ON game.id = goal.matchid WHERE game.stadium = 'National Stadium, Warsaw'
+
+8. he example query shows all goals scored in the Germany-Greece quarterfinal. Instead show the name of all players who scored a goal against Germany.
+* SELECT DISTINCT goal.player FROM goal JOIN game ON game.id = goal.matchid WHERE goal.teamid != 'GER' AND (game.team1 = 'GER' OR game.team2 = 'GER') 
