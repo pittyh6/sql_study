@@ -39,3 +39,8 @@ List the dates of the matches and the name of the team in which 'Fernando Santos
 9. Show teamname and the total number of goals scored.
 COUNT and GROUP BY
 * SELECT eteam.teamname, COUNT(goal.gtime) FROM eteam JOIN goal ON goal.teamid = eteam.id GROUP BY eteam.teamname
+
+10. Show the stadium and the number of goals scored in each stadium.
+* SELECT game.stadium, COUNT(goal.gtime) FROM game JOIN goal ON game.id = goal.matchid GROUP BY game.stadium
+
+11.
