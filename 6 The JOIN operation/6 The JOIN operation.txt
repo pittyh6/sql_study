@@ -45,3 +45,11 @@ COUNT and GROUP BY
 
 11.For every match involving 'POL', show the matchid, date and the number of goals scored.
 * SELECT goal.matchid, game.mdate, COUNT(goal.gtime) FROM goal JOIN game ON goal.matchid = game.id WHERE game.team1 = 'POL' OR game.team2 = 'POL' GROUP BY goal.matchid 
+
+12. For every match where 'GER' scored, show matchid, match date and the number of goals scored by 'GER'
+SELECT goal.matchid, 
+       (SELECT game.mdate FROM game WHERE game.id = goal.matchid) AS mdate,
+       COUNT(goal.gtime)
+ FROM goal 
+  WHERE goal.teamid = 'GER' 
+   GROUP BY goal.matchid
