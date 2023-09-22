@@ -22,3 +22,10 @@ Use movieid=11768, (or whatever value you got from the previous question)
    INNER JOIN actor ON actor.id = casting.actorid) 
    WHERE movie.title = 'Casablanca' 
 
+7.Obtain the cast list for the film 'Alien'
+* SELECT actor.name FROM ((actor
+   JOIN casting ON casting.actorid = actor.id)
+   JOIN movie ON movie.id = casting.movieid)
+   WHERE movie.title = 'Alien'
+
+8. 
